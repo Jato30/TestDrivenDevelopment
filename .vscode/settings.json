@@ -33,6 +33,10 @@
         "type_traits": "cpp",
         "typeinfo": "cpp",
         "utility": "cpp",
-        "vector": "cpp"
+        "vector": "cpp",
+        "iomanip": "cpp",
+        "optional": "cpp",
+        "sstream": "cpp",
+        "string_view": "cpp"
     }
 }

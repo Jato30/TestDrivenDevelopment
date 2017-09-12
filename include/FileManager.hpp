@@ -1,6 +1,6 @@
 // Define para impedir include circular
-#ifndef __READFILE__
-#define __READFILE__
+#ifndef __FILEMANAGER__
+#define __FILEMANAGER__
 
 #include <string>
 
@@ -15,5 +15,13 @@ using std::string;
     Função que lê o arquivo com a string de entrada e a retorna.
 */
 string ReadFile(const string);
+/**
+    \brief Escrita do arquivo de saída.
+    \return Tipo bool referente ao sucesso da função.
+    \param Resultado da soma realizada.
 
-#endif // __READFILE__
+    Função que escreve o resultado da calculadora no arquivo de saída.
+*/
+const bool WriteFile(const int) const;
+
+#endif // __FILEMANAGER__
