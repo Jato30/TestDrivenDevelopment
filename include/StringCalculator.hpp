@@ -2,6 +2,8 @@
 #ifndef __STRINGCALCULATOR__
 #define __STRINGCALCULATOR__
 
+#include <string>
+
 // Namespace std para tipo string
 using std::string;
 
