@@ -68,6 +68,12 @@ TEST_CASE("Testes de sucesso:"){
      }
 
 
+     SECTION("Numero > 1000"){
+          REQUIRE(StringCalculator("17,1000\n"));
+          REQUIRE(StringCalculator("17,4193\n"));
+     }
+
+
      SECTION("Numero nulo em alguma posicao"){
           REQUIRE(StringCalculator("0\n"));
           REQUIRE(StringCalculator("0,0\n"));
@@ -77,6 +83,12 @@ TEST_CASE("Testes de sucesso:"){
           REQUIRE(StringCalculator("17,0\n"));
           REQUIRE(StringCalculator("0,8,9\n"));
           REQUIRE(StringCalculator("8,0,9\n"));
+     }
+
+
+     SECTION("Mais que 3 numeros, mas em linhas diferentes"){
+          REQUIRE(StringCalculator("17\n"));
+          REQUIRE(StringCalculator("1,2,3\n,4,5,6,\n7\n"));
      }
 
 
@@ -91,6 +103,7 @@ TEST_CASE("Testes de sucesso:"){
           REQUIRE(StringCalculator("9,8\n"));
           REQUIRE(StringCalculator("9,7,1\n"));
      }
+
 
      SECTION("Novo delimitador"){
           REQUIRE(StringCalculator("//[,]17\n"));
@@ -112,5 +125,42 @@ TEST_CASE("Testes de sucesso:"){
 }
 
 TEST_CASE("Testes de fracasso:"){
-     
+     SECTION("Numero negativo"){
+          REQUIRE(StringCalculator("-17\n"));
+          REQUIRE(StringCalculator("20,-10,7\n"));
+     }
+
+
+     SECTION("1 numero"){
+          REQUIRE(StringCalculator("17"));
+          REQUIRE(StringCalculator("\n17"));
+     }
+     SECTION("Caracteres invalidos"){
+          REQUIRE(StringCalculator(",\n"));
+          REQUIRE(StringCalculator("\n17 "));
+          REQUIRE(StringCalculator("17 \n"));
+          REQUIRE(StringCalculator("17,\n"));
+          REQUIRE(StringCalculator(",17\n"));
+          REQUIRE(StringCalculator("17"));
+     }
+
+
+     SECTION("Mais que 4 numeros por linha: "){
+          REQUIRE(StringCalculator("3,4,4,3\n"));
+          REQUIRE(StringCalculator("1,\n5,6,3,2\n"));
+     }
+
+
+     SECTION("Delimitador"){
+          REQUIRE(StringCalculator("//[,]8;9\n"));
+          REQUIRE(StringCalculator("//[,]1.7-9\n"));
+
+          REQUIRE(StringCalculator("/[;]17\n"));
+          REQUIRE(StringCalculator("//[;]1,7,9\n"));
+
+          REQUIRE(StringCalculator("//[-----]17\n"));
+          REQUIRE(StringCalculator("//[-----]1----7-----9\n"));
+
+          REQUIRE(StringCalculator("//[!@#/]1!@#/7!@#9\n"));
+     }
 }
