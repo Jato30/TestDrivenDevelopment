@@ -17,10 +17,11 @@ std::string ReadFile(const std::string);
 /**
     \brief Escrita do arquivo de saída.
     \return Tipo bool referente ao sucesso da função.
-    \param Resultado da soma realizada.
+    \param int Resultado da soma realizada.
+    \param std::string Caminho para o arquivo de saída.
 
     Função que escreve o resultado da calculadora no arquivo de saída.
 */
-bool WriteFile(int);
+bool WriteFile(int, std::string = "./resources/OutputString.txt");
 
 #endif // __FILEMANAGER__

@@ -20,8 +20,17 @@ string ReadFile(const string path){
     return entry;
 }
 
-bool WriteFile(int sum){
+bool WriteFile(int sum, string path){
+    ofstream myfile(path);
     
-    
+    if(myfile.is_open()){
+        myfile << sum;
+        myfile.close();
+    }
+    else{
+        cout << "Impossivel abrir arquivo" << endl;
+        return false;
+    }
+
     return true;
 }
