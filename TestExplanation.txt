@@ -1,0 +1,499 @@
+### Existem 2 casos de teste: caso de sucesso e caso de fracasso.
+### No caso de sucesso foram colocados valores que deveriam ser aceitos pelo algorítmo.
+### No caso de fracasso foram colocados valores que deveriam falhar no algorítmo.
+
+### Cada caso de teste foram divididos em seções para realiarem testes similares com um mesmo título de seção.
+
+
+
+
+
+### Estes são os casos de sucesso.
+TEST_CASE("Testes de sucesso:"){
+
+
+
+     ### Esta seção verifica strings com apenas 1 número e, então, quantidades variadas de quebras de linha.
+     ### Obs: Nesta seção, todos os testes devem retornar o valor 17 para a soma.
+     SECTION("1 numero + quebra de linha"){
+
+
+          ### Passar neste teste significa que são aceitas strings com 1 quebra de linha após 1 número.
+          REQUIRE(StringCalculator("17\n"));
+
+          ### Passar neste teste significa que são aceitas strings com 2 quebras de linha após 1 número.
+          REQUIRE(StringCalculator("17\n\n"));
+
+          ### Passar neste teste significa que são aceitas strings com 11 (ou qualquer quantidade de) quebras de linha após 1 número.
+          REQUIRE(StringCalculator("17\n\n\n\n\n\n\n\n\n\n\n"));
+
+
+     }
+
+
+
+     ### Esta seção verifica strings com apenas 1 número e quantidades variadas de quebras de linha em qualquer posição.
+     ### Obs: Nesta seção, todos os testes devem retornar o valor 17 para a soma.
+     SECTION("1 numero: quebra de linha antes do numero"){
+
+
+          ### Passar neste teste significa que são aceitas strings com 1 quebra de linha antes de 1 número.
+          REQUIRE(StringCalculator("\n17\n"));
+
+          ### Passar neste teste significa que são aceitas strings com 2 quebras de linha antes de 1 número.
+          REQUIRE(StringCalculator("\n\n17\n"));
+
+          ### Passar neste teste significa que são aceitas strings com 7 (ou qualquer quantidade de) quebras de linha antes de 1 número.
+          REQUIRE(StringCalculator("\n\n\n\n\n\n\n17\n"));
+
+
+     }
+
+
+
+
+     ### Esta seção verifica strings com 2 números e quantidades variadas de quebras de linha após os números.
+     ### Obs: Nesta seção, todos os testes devem retornar o valor 17 para a soma.
+     SECTION("2 numeros + quebra de linha"){
+
+
+          ### Passar neste teste significa que são aceitas strings com 1 quebra de linha após 2 números.
+          REQUIRE(StringCalculator("8,9\n"));
+          
+          ### Passar neste teste significa que são aceitas strings com 2 quebra de linha após 2 números.
+          REQUIRE(StringCalculator("8,9\n\n"));
+          
+          ### Passar neste teste significa que são aceitas strings com 11 (ou qualquer quantidade de) quebras de linha após 2 números.
+          REQUIRE(StringCalculator("8,9\n\n\n\n\n\n\n\n\n\n\n"));
+
+
+     }
+
+
+
+
+     ### Esta seção verifica strings com 2 números e quantidades variadas de quebras de linha antes do segundo número.
+     ### Obs: Nesta seção, todos os testes devem retornar o valor 17 para a soma.
+     SECTION("2 numeros: Quebra de linha antes do ultimo numero"){
+
+
+          ### Passar neste teste significa que são aceitas strings com 1 quebra de linha entre o delimitador e o 2º número.
+          REQUIRE(StringCalculator("8,\n9\n"));
+
+          ### Passar neste teste significa que são aceitas strings com 2 quebras de linha entre o delimitador e o 2º número.
+          REQUIRE(StringCalculator("8,\n\n9\n"));
+
+          ### Passar neste teste significa que são aceitas strings com 10 (ou qualquer quantidade de) quebras de linha entre o delimitador e o 2º número.
+          REQUIRE(StringCalculator("8,\n\n\n\n\n\n\n\n\n\n9\n"));
+
+
+     }
+
+
+
+     ### Esta seção verifica strings com 2 números e quantidades variadas de quebras de linha depois do primeiro número.
+     ### Obs: Nesta seção, todos os testes devem retornar o valor 17 para a soma.
+     SECTION("2 numeros: Quebra de linha depois do primeiro numero"){
+
+
+          ### Passar neste teste significa que são aceitas strings com 1 quebra de linha entre o 1º número e o delimitador.
+          REQUIRE(StringCalculator("8\n,9\n"));
+
+          ### Passar neste teste significa que são aceitas strings com 2 quebras de linha entre o 1º número e o delimitador.
+          REQUIRE(StringCalculator("8\n\n,9\n"));
+
+          ### Passar neste teste significa que são aceitas strings com 10 (ou qualquer quantidade de) quebras de linha entre o 1º número e o delimitador.
+          REQUIRE(StringCalculator("8\n\n\n\n\n\n\n\n\n\n,9\n"));
+
+
+     }
+
+
+
+     ### Esta seção verifica strings com 2 números e quantidades variadas de quebras de linha antes do primeiro número.
+     ### Obs: Nesta seção, todos os testes devem retornar o valor 17 para a soma.
+     SECTION("2 numeros: Quebra de linha antes do primeiro numero"){
+
+
+          ### Passar neste teste significa que são aceitas strings com 1 quebra de linha antes do 1º número.
+          REQUIRE(StringCalculator("\n8,9\n"));
+          
+          ### Passar neste teste significa que são aceitas strings com 2 quebras de linha no início da string.
+          REQUIRE(StringCalculator("\n\n8,9\n"));
+          
+          ### Passar neste teste significa que são aceitas strings com 10 (ou qualquer quantidade de) quebras de linha antes do 1º número.
+          REQUIRE(StringCalculator("\n\n\n\n\n\n\n\n\n\n8,9\n"));
+
+
+     }
+
+
+
+     ### Esta seção verifica strings com 3 números e quantidades variadas de quebras de linha antes do primeiro número.
+     ### Obs: Nesta seção, todos os testes devem retornar o valor 17 para a soma.
+     SECTION("3 numeros + quebra de linha"){
+
+
+          ### Passar neste teste significa que são aceitas strings com 1 quebra de linha após 3 números.
+          REQUIRE(StringCalculator("1,7,9\n"));
+
+          ### Passar neste teste significa que são aceitas strings com 2 quebra de linha após 3 números.
+          REQUIRE(StringCalculator("1,7,9\n\n"));
+
+          ### Passar neste teste significa que são aceitas strings com 11 (ou qualquer quantidade de) quebras de linha após 3 números.
+          REQUIRE(StringCalculator("1,7,9\n\n\n\n\n\n\n\n\n\n\n"));
+
+          
+     }
+
+
+
+     ### Esta seção verifica strings com 3 números e quantidades variadas de quebras de linha antes do terceiro número.
+     ### Obs: Nesta seção, todos os testes devem retornar o valor 17 para a soma.
+     SECTION("3 numeros: Quebra de linha antes do ultimo numero"){
+
+
+          ### Passar neste teste significa que são aceitas strings com 1 quebra de linha entre o delimitador e o 3º número.
+          REQUIRE(StringCalculator("1,7,\n9\n"));
+
+          ### Passar neste teste significa que são aceitas strings com 2 quebras de linha entre o delimitador e o 3º número.
+          REQUIRE(StringCalculator("1,7,\n\n9\n"));
+
+          ### Passar neste teste significa que são aceitas strings com 10 (ou qualquer quantidade de) quebras de linha entre o delimitador e o 3º número.
+          REQUIRE(StringCalculator("1,7,\n\n\n\n\n\n\n\n\n\n9\n"));
+
+
+     }
+
+
+
+     ### Esta seção verifica strings com 3 números e quantidades variadas de quebras de linha depois do segundo número.
+     ### Obs: Nesta seção, todos os testes devem retornar o valor 17 para a soma.
+     SECTION("3 numeros: Quebra de linha depois do segundo numero"){
+
+
+          ### Passar neste teste significa que são aceitas strings com 1 quebra de linha entre o 2º número e o delimitador.
+          REQUIRE(StringCalculator("1,7\n,9\n"));
+
+          ### Passar neste teste significa que são aceitas strings com 2 quebras de linha entre o 2º número e o delimitador.
+          REQUIRE(StringCalculator("1,7\n\n,9\n"));
+
+          ### Passar neste teste significa que são aceitas strings com 10 (ou qualquer quantidade de) quebras de linha entre o 2º número e o delimitador.
+          REQUIRE(StringCalculator("1,7\n\n\n\n\n\n\n\n\n\n,9\n"));
+     
+
+     }
+
+
+
+     ### Esta seção verifica strings com 3 números e quantidades variadas de quebras de linha antes do segundo número.
+     ### Obs: Nesta seção, todos os testes devem retornar o valor 17 para a soma.
+     SECTION("3 numeros: Quebra de linha antes do segundo numero"){
+
+
+          ### Passar neste teste significa que são aceitas strings com 1 quebra de linha entre o delimitador e o 2º número.
+          REQUIRE(StringCalculator("1,\n7,9\n"));
+
+          ### Passar neste teste significa que são aceitas strings com 2 quebras de linha entre o delimitador e o 2º número.
+          REQUIRE(StringCalculator("1,\n\n7,9\n"));
+
+          ### Passar neste teste significa que são aceitas strings com 10 (ou qualquer quantidade de) quebras de linha entre o delimitador e o 2º número.
+          REQUIRE(StringCalculator("1,\n\n\n\n\n\n\n\n\n\n7,9\n"));
+     
+
+     }
+
+
+
+     ### Esta seção verifica strings com 3 números e quantidades variadas de quebras de linha depois do primeiro número.
+     ### Obs: Nesta seção, todos os testes devem retornar o valor 17 para a soma.
+     SECTION("3 numeros: Quebra de linha depois do primeiro numero"){
+
+
+          ### Passar neste teste significa que são aceitas strings com 1 quebra de linha entre o 1º número e o delimitador.
+          REQUIRE(StringCalculator("1\n,7,9\n"));
+
+          ### Passar neste teste significa que são aceitas strings com 2 quebras de linha entre o 1º número e o delimitador.
+          REQUIRE(StringCalculator("1\n\n,7,9\n"));
+
+          ### Passar neste teste significa que são aceitas strings com 10 (ou qualquer quantidade de) quebras de linha entre o 1º número e o delimitador.
+          REQUIRE(StringCalculator("1\n\n\n\n\n\n\n\n,7,9\n"));
+     
+
+     }
+
+
+
+     ### Esta seção verifica strings com 3 números e quantidades variadas de quebras de linha antes do primeiro número.
+     ### Obs: Nesta seção, todos os testes devem retornar o valor 17 para a soma.
+     SECTION("3 numeros: Quebra de linha antes do primeiro numero"){
+          
+          
+          ### Passar neste teste significa que são aceitas strings com 1 quebra de linha antes do 1º número.
+          REQUIRE(StringCalculator("\n1,7,9\n"));
+          
+          ### Passar neste teste significa que são aceitas strings com 2 quebras de linha no início da string.
+          REQUIRE(StringCalculator("\n\n1,7,9\n\n"));
+
+          ### Passar neste teste significa que são aceitas strings com 10 (ou qualquer quantidade de) quebras de linha antes do 1º número.
+          REQUIRE(StringCalculator("\n\n\n\n\n\n1,7,9\n"));
+
+          
+     }
+
+
+
+     ### Esta seção verifica strings com algum número maior que 1000 (mil).
+     SECTION("Numero > 1000"){
+
+
+          ### Passar neste teste significa que são aceitas strings com o número mil. Retorno 1017.
+          REQUIRE(StringCalculator("17,1000\n"));
+
+          ### Passar neste teste significa que são aceitas strings com algum número maior que mil. No entanto, este é considerado como se fosse 0. Retorno 17.
+          REQUIRE(StringCalculator("17,4193\n"));
+
+
+     }
+
+
+
+     ### Esta seção verifica strings com algum número nulo (0) em qualquer posição.
+     SECTION("Numero nulo em alguma posicao"){
+
+
+          ### Passar neste teste significa que são aceitas strings com o número 0 (zero). Retorno 0.
+          REQUIRE(StringCalculator("0\n"));
+
+          ### Passar neste teste significa que são aceitas strings com mais de 1 número 0 (zero) com qualquer quantidade de zeros. Retorno 0.
+          REQUIRE(StringCalculator("00,0\n"));
+
+          ### Passar neste teste significa que são aceitas strings com mais de 1 número 0 (zero) com qualquer quantidade de zeros, em qualquer posição. Retorno 0.
+          REQUIRE(StringCalculator("0,0000,0\n"));
+
+
+          ### Passar neste teste significa que são aceitas strings com o número 0 (zero) com qualquer outro número. Retorno 17.
+          REQUIRE(StringCalculator("0,17\n"));
+
+          ### Passar neste teste significa que são aceitas strings com o número 0 (zero) com qualquer outro número, em qualquer posição. Retorno 17.
+          REQUIRE(StringCalculator("17,0\n"));
+
+          ### Passar neste teste significa que são aceitas strings com o número 0 (zero) com qualquer outro número e combinado à esquerda de qualquer número. Retorno 17.
+          REQUIRE(StringCalculator("0,008,9\n"));
+
+          ### Passar neste teste significa que são aceitas strings com quantidades diferentes do número 0 (zero) com qualquer outro número. Retorno 17.
+          REQUIRE(StringCalculator("17,0,0\n"));
+     }
+
+
+
+     ### Esta seção verifica strings com mais de 3 números só que não mais que 3 números por linha.
+     ### Obs: Nesta seção, todos os testes devem retornar o valor 17 para a soma.
+     SECTION("Mais que 3 numeros, mas em linhas diferentes"){
+
+
+          ### Passar neste teste significa que são aceitas strings com até 3 números por linha, mas quantas linhas quiser.
+          REQUIRE(StringCalculator("1,2,3\n,4,5,6,\n7\n"));
+
+
+     }
+
+
+
+     ### Esta seção verifica strings com mais de 3 números só que não mais que 3 números por linha.
+     SECTION("Numeros iguais"){
+
+
+          ### Passar neste teste significa que são aceitas strings com 2 números iguais.
+          REQUIRE(StringCalculator("9,9\n"));
+
+          ### Passar neste teste significa que são aceitas strings com 3 números iguais.
+          REQUIRE(StringCalculator("6,6,6\n"));
+
+
+     }
+
+
+
+     ### Esta seção verifica ordenação das strings.
+     ### Obs: Nesta seção, todos os testes devem retornar o valor 17 para a soma.
+     SECTION("Numeros decrescentes"){
+
+
+          ### Passar neste teste significa que são aceitas strings com 2 números imediatamente descrescentes.
+          REQUIRE(StringCalculator("9,8\n"));
+
+          ### Passar neste teste significa que são aceitas strings com qualquer sequencia de números desordenada.
+          REQUIRE(StringCalculator("9,7,1\n"));
+
+
+     }
+
+
+
+     ### Esta seção verifica strings que definem um novo delimitador.
+     ### Obs: Nesta seção, todos os testes devem retornar o valor 17 para a soma.
+     SECTION("Novo delimitador"){
+
+
+          ### Passar neste teste significa que são aceitas strings com sintaxe correta de definição de novo delimitador, mesmo que igual ao padrão.
+          REQUIRE(StringCalculator("//[,]17\n"));
+
+          ### Passar neste teste significa que são aceitas strings que definem e utilizam o mesmo delimitador padrão.
+          REQUIRE(StringCalculator("//[,]8,9\n"));
+
+          ### Passar neste teste significa que são aceitas strings que definem e utilizam várias vezes o mesmo delimitador padrão.
+          REQUIRE(StringCalculator("//[,]1,7,9\n"));
+
+
+          ### Passar neste teste significa que são aceitas strings com sintaxe correta de definição de novo delimitador diferente do padrão.
+          REQUIRE(StringCalculator("//[;]17\n"));
+
+          ### Passar neste teste significa que são aceitas strings que defininem um novo delimitador simples (1 caractere) e usam uma vez.
+          REQUIRE(StringCalculator("//[;]8;9\n"));
+
+          ### Passar neste teste significa que são aceitas strings que defininem e utilizam mais de uma vez um novo delimitador.
+          REQUIRE(StringCalculator("//[;]1;7;9\n"));
+
+
+          ### Passar neste teste significa que são aceitas strings que defininem corretamente um novo delimitador com mais de 1 caractere igual.
+          REQUIRE(StringCalculator("//[-----]17\n"));
+
+          ### Passar neste teste significa que são aceitas strings que utilizam uma vez um delimitador com mais de 1 caractere.
+          REQUIRE(StringCalculator("//[-----]8-----9\n"));
+
+          ### Passar neste teste significa que são aceitas strings que utilizam mais de uma vez um delimitador com mais de 1 caractere igual.
+          REQUIRE(StringCalculator("//[-----]1-----7-----9\n"));
+
+
+          ### Passar neste teste significa que são aceitas strings que defininem corretamente um novo delimitador com mais de 1 caractere.
+          REQUIRE(StringCalculator("//[!@#/]17\n"));
+
+          ### Passar neste teste significa que são aceitas strings que utilizam uma vez um delimitador com caracteres diferentes.
+          REQUIRE(StringCalculator("//[!@#/]8!@#/9\n"));
+
+          ### Passar neste teste significa que são aceitas strings que utilizam mais uma vez um delimitador com mais de 1 caractere.
+          REQUIRE(StringCalculator("//[!@#/]1!@#/7!@#/9\n"));
+
+
+     }
+
+}
+### Fim do caso de sucesso
+
+
+
+
+
+### Estes são os casos de fracasso.
+### Obs: Neste teste, todos os testes devem retornar o valor -1, pois é o valor de erro.
+TEST_CASE("Testes de fracasso:"){
+
+
+
+     ### Esta seção verifica strings com números negativos.
+     SECTION("Numero negativo"){
+
+
+          ### Passar neste teste significa que são rejeitadas as strings com 1 número negativo.
+          REQUIRE(StringCalculator("-17\n"));
+
+          ### Passar neste teste significa que são rejeitadas as strings com mais de 1 número negativo.
+          REQUIRE(StringCalculator("20,-10,-7\n"));
+
+
+     }
+
+
+
+     ### Esta seção verifica strings sem a quebra de linha no final.
+     SECTION("Sem quebra de linha no final"){
+
+
+          ### Passar neste teste significa que são rejeitadas as strings sem nenhuma quebra de linha.
+          REQUIRE(StringCalculator("17"));
+
+          ### Passar neste teste significa que são rejeitadas as strings com alguma quebra de linha, mas não no final.
+          REQUIRE(StringCalculator("\n17"));
+
+
+     }
+
+
+
+     ### Esta seção verifica strings com caracteres inválidos.
+     SECTION("Caracteres invalidos"){
+
+
+          ### Passar neste teste significa que são rejeitadas as strings sem nenhum número, apenas o delimitador.
+          REQUIRE(StringCalculator(",\n"));
+
+          ### Passar neste teste significa que são rejeitadas as strings que terminam em espaço.
+          REQUIRE(StringCalculator("\n17 "));
+
+          ### Passar neste teste significa que são rejeitadas as strings que possuem algum espaço.
+          REQUIRE(StringCalculator("17 \n"));
+
+          ### Passar neste teste significa que são rejeitadas as strings que não têm números após o delimitador.
+          REQUIRE(StringCalculator("17,\n"));
+
+          ### Passar neste teste significa que são rejeitadas as strings que começam com o delimitador.
+          REQUIRE(StringCalculator(",17\n"));
+
+          ### Passar neste teste significa que são rejeitadas as strings com combinação de letras e números.
+          REQUIRE(StringCalculator("a17\n"));
+
+          ### Passar neste teste significa que são rejeitadas as strings que têm letras.
+          REQUIRE(StringCalculator("8,a,9\n"));
+
+
+     }
+
+
+
+     ### Esta seção verifica strings com mais que 3 números por linha.
+     SECTION("Mais que 4 numeros por linha: "){
+
+
+          ### Passar neste teste significa que são rejeitadas as strings que não possuem quebra de linha após o 3º número.
+          REQUIRE(StringCalculator("3,4,4,3\n"));
+
+          ### Passar neste teste significa que são rejeitadas as strings que possuem mais de 3 números em qualquer linha.
+          REQUIRE(StringCalculator("1,\n5,6,3,2\n"));
+
+
+     }
+
+
+
+     ### Esta seção verifica strings com erros de delimitador.
+     SECTION("Delimitador"){
+
+
+          ### Passar neste teste significa que são rejeitadas as strings que definem como novo delimitador o delimitador padrão, mas usam outro.
+          REQUIRE(StringCalculator("//[,]8;9\n"));
+
+          ### Passar neste teste significa que são rejeitadas as strings que definem como novo delimitador o delimitador padrão, mas usam mais de um.
+          REQUIRE(StringCalculator("//[,]1,7-9\n"));
+
+
+          ### Passar neste teste significa que são rejeitadas as strings que definem um novo delimitador, mas usam o padrão.
+          REQUIRE(StringCalculator("//[;]8,9\n"));
+
+          ### Passar neste teste significa que são rejeitadas as strings que definem um novo delimitador, mas usam outro.
+          REQUIRE(StringCalculator("//[;]1;7.9\n"));
+
+          ### Passar neste teste significa que são rejeitadas as strings que definem um novo delimitador com sintaxe errada.
+          REQUIRE(StringCalculator("/[-----]17\n"));
+
+          ### Passar neste teste significa que são rejeitadas as strings que definem um novo delimitador, mas erra o tamanho.
+          REQUIRE(StringCalculator("//[-----]1----7-----9\n"));
+
+          ### Passar neste teste significa que são rejeitadas as strings que definem um novo delimitador, mas esquece um caractere.
+          REQUIRE(StringCalculator("//[!@#/]1!@#/7!@#9\n"));
+
+
+     }
+
+}
+### Fim do caso de fracasso
