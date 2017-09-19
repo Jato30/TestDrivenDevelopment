@@ -1,0 +1,15 @@
+var searchData=
+[
+  ['decomposedexpression',['DecomposedExpression',['../structCatch_1_1DecomposedExpression.html',1,'Catch::DecomposedExpression'],['../structCatch_1_1AssertionResultData.html#a45b2bf2ed11da83d09dd78a2b7a44cd4',1,'Catch::AssertionResultData::decomposedExpression()']]],
+  ['deleteall',['deleteAll',['../namespaceCatch.html#aadf9786550a462740ec355f8219863a9',1,'Catch']]],
+  ['deleteallvalues',['deleteAllValues',['../namespaceCatch.html#af2fcec1d4bd984fe19ff8b9a432c36a8',1,'Catch']]],
+  ['delta',['delta',['../structCatch_1_1Totals.html#a1a94a654f5f3786b75695e081fc9bca2',1,'Catch::Totals']]],
+  ['describe',['describe',['../classCatch_1_1Matchers_1_1Impl_1_1MatcherUntypedBase.html#a91d3a907dbfcbb596077df24f6e11fe2',1,'Catch::Matchers::Impl::MatcherUntypedBase::describe()'],['../structCatch_1_1Matchers_1_1Impl_1_1MatchAllOf.html#aaefeba99a0b35425203468a65bff544b',1,'Catch::Matchers::Impl::MatchAllOf::describe()'],['../structCatch_1_1Matchers_1_1Impl_1_1MatchAnyOf.html#a020f5d7889d8cd8be9ad309c690147b6',1,'Catch::Matchers::Impl::MatchAnyOf::describe()'],['../structCatch_1_1Matchers_1_1Impl_1_1MatchNotOf.html#a62bdc7dcb9ff000438a4ed3d5483a248',1,'Catch::Matchers::Impl::MatchNotOf::describe()'],['../structCatch_1_1Matchers_1_1StdString_1_1StringMatcherBase.html#a9d15cfb882efbea778b2ed29e7f48f37',1,'Catch::Matchers::StdString::StringMatcherBase::describe()'],['../structCatch_1_1Matchers_1_1Vector_1_1ContainsElementMatcher.html#a5a869772714dd045816707b74b217664',1,'Catch::Matchers::Vector::ContainsElementMatcher::describe()'],['../structCatch_1_1Matchers_1_1Vector_1_1ContainsMatcher.html#add1a31f049cec89f980424ecdb7027ac',1,'Catch::Matchers::Vector::ContainsMatcher::describe()'],['../structCatch_1_1Matchers_1_1Vector_1_1EqualsMatcher.html#aca79ade26f4a75b2a57005067e086e35',1,'Catch::Matchers::Vector::EqualsMatcher::describe()']]],
+  ['description',['description',['../structCatch_1_1NameAndDesc.html#a3463a23ff65ce494fc380452b57b7970',1,'Catch::NameAndDesc::description()'],['../structCatch_1_1SectionInfo.html#a0052060219a6de74bb7ade34d4163a4e',1,'Catch::SectionInfo::description()'],['../structCatch_1_1TestCaseInfo.html#a37fe2db9425bc45f6a33893eac31198e',1,'Catch::TestCaseInfo::description()']]],
+  ['didntthrowexception',['DidntThrowException',['../structCatch_1_1ResultWas.html#a624e1ee3661fcf6094ceef1f654601efa8b6d3d5bc78d4e7a95543b6ecfbdb57d',1,'Catch::ResultWas']]],
+  ['discarddecomposedexpression',['discardDecomposedExpression',['../classCatch_1_1AssertionResult.html#a406884d8b8209c80078706724c528df5',1,'Catch::AssertionResult']]],
+  ['dummy1',['dummy1',['../classCatch_1_1Option.html#a48ef08179923d6f943abe614999e6073',1,'Catch::Option']]],
+  ['dummy2',['dummy2',['../classCatch_1_1Option.html#afa73c2396b7732932a148b3c889b81d1',1,'Catch::Option']]],
+  ['dummy3',['dummy3',['../classCatch_1_1Option.html#a5540a84662093591be496c3a57e9da3f',1,'Catch::Option']]],
+  ['durationinseconds',['durationInSeconds',['../structCatch_1_1SectionEndInfo.html#a7c262f2dab9cff166b8eca620c47eea5',1,'Catch::SectionEndInfo']]]
+];

@@ -1,0 +1,55 @@
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+# Configuração local do vscode
+.vscode/launch.json
+
+#configuração local do Qt
+*.user
+
+#compilados
+bin/*
+CALC*
+dep/*
+*/dep
+
+
+.idea/*
+cmake-build-debug/
+
+#arquivos da IDE Clion
+.idea/EngineIDJ.iml
+.idea/modules.xml
+.idea/workspace.xml
+cmake-build-debug/*
+
+
+#arquivos da IDE qt
+EngineIDJ.files

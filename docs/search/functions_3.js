@@ -1,0 +1,8 @@
+var searchData=
+[
+  ['deleteall',['deleteAll',['../namespaceCatch.html#aadf9786550a462740ec355f8219863a9',1,'Catch']]],
+  ['deleteallvalues',['deleteAllValues',['../namespaceCatch.html#af2fcec1d4bd984fe19ff8b9a432c36a8',1,'Catch']]],
+  ['delta',['delta',['../structCatch_1_1Totals.html#a1a94a654f5f3786b75695e081fc9bca2',1,'Catch::Totals']]],
+  ['describe',['describe',['../classCatch_1_1Matchers_1_1Impl_1_1MatcherUntypedBase.html#a91d3a907dbfcbb596077df24f6e11fe2',1,'Catch::Matchers::Impl::MatcherUntypedBase::describe()'],['../structCatch_1_1Matchers_1_1Impl_1_1MatchAllOf.html#aaefeba99a0b35425203468a65bff544b',1,'Catch::Matchers::Impl::MatchAllOf::describe()'],['../structCatch_1_1Matchers_1_1Impl_1_1MatchAnyOf.html#a020f5d7889d8cd8be9ad309c690147b6',1,'Catch::Matchers::Impl::MatchAnyOf::describe()'],['../structCatch_1_1Matchers_1_1Impl_1_1MatchNotOf.html#a62bdc7dcb9ff000438a4ed3d5483a248',1,'Catch::Matchers::Impl::MatchNotOf::describe()'],['../structCatch_1_1Matchers_1_1StdString_1_1StringMatcherBase.html#a9d15cfb882efbea778b2ed29e7f48f37',1,'Catch::Matchers::StdString::StringMatcherBase::describe()'],['../structCatch_1_1Matchers_1_1Vector_1_1ContainsElementMatcher.html#a5a869772714dd045816707b74b217664',1,'Catch::Matchers::Vector::ContainsElementMatcher::describe()'],['../structCatch_1_1Matchers_1_1Vector_1_1ContainsMatcher.html#add1a31f049cec89f980424ecdb7027ac',1,'Catch::Matchers::Vector::ContainsMatcher::describe()'],['../structCatch_1_1Matchers_1_1Vector_1_1EqualsMatcher.html#aca79ade26f4a75b2a57005067e086e35',1,'Catch::Matchers::Vector::EqualsMatcher::describe()']]],
+  ['discarddecomposedexpression',['discardDecomposedExpression',['../classCatch_1_1AssertionResult.html#a406884d8b8209c80078706724c528df5',1,'Catch::AssertionResult']]]
+];

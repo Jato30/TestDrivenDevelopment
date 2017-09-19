@@ -1,26 +1,40 @@
-IDIR =../include
-CC=g++
-CFLAGS=-I$(IDIR)
+FILES = src/StringCalculator.cpp src/FileManager.cpp
 
-ODIR=obj
-LDIR =../lib
+FLAGS= -std=c++11 -Wall -pedantic -Wextra -fmax-errors=5 -Wno-unused-parameter -Werror=init-self -fdiagnostics-color
 
-LIBS=-lm
+EXEC = CALC
 
-_DEPS = hellomake.h
-DEPS = $(patsubst %,$(IDIR)/%,$(_DEPS))
+#comando para remover pastas
+RMDIR = rm -rf
+#comando para remover arquivos
+RM = rm -f
+CD = cd
 
-_OBJ = hellomake.o hellofunc.o 
-OBJ = $(patsubst %,$(ODIR)/%,$(_OBJ))
+ifeq ($(OS),Windows_NT)
 
+EXEC += .exe
 
-$(ODIR)/%.o: %.c $(DEPS)
-	$(CC) -c -o $@ $< $(CFLAGS)
+#comando para remover um diretório recursivamente
+RMDIR= rd /s /q
+#comando para deletar um único arquivo
+RM = del
 
-hellomake: $(OBJ)
-	gcc -o $@ $^ $(CFLAGS) $(LIBS)
+endif
 
-.PHONY: clean
+release: src/main.cpp $(FILES)
+	g++ $(FILES) src/main.cpp -Iinclude -o $(EXEC) $(FLAGS)
+
+debug: src/main.cpp $(FILES)
+	g++ $(FILES) src/main.cpp -Iinclude -o $(EXEC) $(FLAGS) -O0 -ggdb
+
+test: src/main.cpp $(FILES)
+	g++ $(FILES) src/TestCalculator.cpp -Iinclude -o CALC.exe $(FLAGS) -O0 -ggdb -ftest-coverage -fprofile-arcs
+
+docs:
+	doxygen Doxyfile
 
 clean:
-	rm -f $(ODIR)/*.o *~ core $(INCDIR)/*~ 
+	$(RM) $(EXEC)
+
+clean-doc:
+	$(RMDIR) docs

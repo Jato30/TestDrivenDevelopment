@@ -12,11 +12,12 @@ Matrícula: 17/0052427
 
 	1) O programa está dividido em módulos e desenvolvido em C++;
 	2) Makefile próprio:
+		Diretivas de compilação. Comandos:
 		2.1) ;
 	3) Documento dizendo quais testes foram feitos a cada passo e o que passar neste teste significa;
 	4) Framework de teste: Catch v1.10.0;
-	5) Instrumentação do código pelo gcov versão ###############;
-	6) Análise estática do programa: cppcheck versão ###############;
+	5) Instrumentação do código pelo gcov v7.2.0;
+	6) Análise estática do programa: cppcheck v1.80;
 	7) Documentação do código: DoxyGen v1.8.13
 	9) Debug: GDB v8.0
 	10) Compilador: MinGW
