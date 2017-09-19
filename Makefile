@@ -4,6 +4,8 @@ FLAGS= -std=c++11 -Wall -pedantic -Wextra -fmax-errors=5 -Wno-unused-parameter -
 
 EXEC = CALC
 
+COMPILER = g++
+
 #comando para remover pastas
 RMDIR = rm -rf
 #comando para remover arquivos
@@ -12,7 +14,7 @@ CD = cd
 
 ifeq ($(OS),Windows_NT)
 
-EXEC += .exe
+EXEC := $(EXEC).exe
 
 #comando para remover um diretório recursivamente
 RMDIR= rd /s /q
@@ -22,13 +24,13 @@ RM = del
 endif
 
 release: src/main.cpp $(FILES)
-	g++ $(FILES) src/main.cpp -Iinclude -o $(EXEC) $(FLAGS)
+	$(COMPILER) $(FILES) src/main.cpp -Iinclude -o $(EXEC) $(FLAGS)
 
 debug: src/main.cpp $(FILES)
-	g++ $(FILES) src/main.cpp -Iinclude -o $(EXEC) $(FLAGS) -O0 -ggdb
+	$(COMPILER) $(FILES) src/main.cpp -Iinclude -o $(EXEC) $(FLAGS) -O0 -ggdb
 
-test: src/main.cpp $(FILES)
-	g++ $(FILES) src/TestCalculator.cpp -Iinclude -o CALC.exe $(FLAGS) -O0 -ggdb -ftest-coverage -fprofile-arcs
+test: src/TestCalculator.cpp $(FILES)
+	$(COMPILER) $(FILES) src/TestCalculator.cpp -Iinclude -o CALC.exe $(FLAGS) -O0 -ggdb -ftest-coverage -fprofile-arcs
 
 docs:
 	doxygen Doxyfile

@@ -3,9 +3,8 @@
 #define __FILEMANAGER__
 
 #include <string>
-
-// Namespace std para tipo string
-using std::string;
+#include <iostream>
+#include <fstream>
 
 /**
     \brief Leitura do arquivo de entrada.
@@ -14,7 +13,7 @@ using std::string;
 
     Função que lê o arquivo com a string de entrada e a retorna.
 */
-string ReadFile(const string);
+std::string ReadFile(const std::string);
 /**
     \brief Escrita do arquivo de saída.
     \return Tipo bool referente ao sucesso da função.
@@ -22,6 +21,6 @@ string ReadFile(const string);
 
     Função que escreve o resultado da calculadora no arquivo de saída.
 */
-const bool WriteFile(const int) const;
+bool WriteFile(int);
 
 #endif // __FILEMANAGER__

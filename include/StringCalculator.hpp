@@ -7,9 +7,14 @@
 // Namespace std para tipo string
 using std::string;
 
+#define TRUE 1
+#define FALSE 0
+
+typedef unsigned int uint;
+
 /**
     \brief Soma inteiros numa string.
-    \return Tipo bool referente ao sucesso da função, ou cumprimento dos requisitos.
+    \return Tipo int referente ao sucesso da função, ou cumprimento dos requisitos. 0 para falso e 1 para verdadeiro.
     \param String de entrada a ser lida.
 
     Função de calculadora que recebe uma string para fazer a soma dos termos separados por um delimitador.
@@ -22,6 +27,6 @@ using std::string;
         Pode-se especificar um novo delimitador na primeira linha, desde que esteja entre colchetes, sozinho na primeira linha e começando por um "//".
         Pode haver qualquer número de delimitadores especificados e de qualquer tamanho.
 */
-bool StringCalculator(string);
+int StringCalculator(string);
 
 #endif // __STRINGCALCULATOR__

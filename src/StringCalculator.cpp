@@ -1,35 +1,54 @@
 #include "StringCalculator.hpp"
+#include <cctype>
 
-bool StringCalculator(string entry){
+int StringCalculator(string entry){
     int finalSum = 0, countLimiters = 0;
     char limiter = ',';
-    bool readyToFinish = false;
+    int readyToFinish = FALSE;
 
-    for(int index = 0; index < entry.size(); index++){ // Lê a entrada
-        if(index == 0 && entry.size() > 3){ // Verifica se foi definido um novo delimitador
-            if(entry[index] == '/' && entry[index + 1] == '/'){
-                limiter = entry[index + 2];
-                index = 3;
-            }
-        }
+    // Lê a entrada
+    for(uint index = 0; index < entry.size(); index++){
+
+        // // Verifica se foi definido um novo delimitador
+        // if(index == 0 && entry.size() > 5){
+        //     if(entry[index] == '/' && entry[index + 1] == '/' && entry[index + 2] == '['){
+        //         index = 3;
+
+        //         limiter = "";
+
+        //         while(entry[index] == ']'){
+        //             limiter += entry[index];
+        //             index++;
+        //         }
+        //     }
+        // }
         
-        if(countLimiters > 2){ // Se há mais de 2 delimitadores por linha, dá erro
-            return -1;
+        // Se há mais de 2 delimitadores por linha, dá erro
+        if(countLimiters > 2){
+            return FALSE;
         }
-        if(isDigit(entry[index])){ // Se o valor lido for um dígito, soma-o
+
+        // Se o valor lido for um dígito, soma-o
+        if(isdigit(entry[index])){
             finalSum += (int) entry[index];
-            readyToFinish = false;
+            readyToFinish = FALSE;
         }
-        if(entry[index] == limiter && isDigit(entry[index + 1])){ // Se o numero lido for um dígito e o próximo um delimitador, incrementa o contador de delimitadores
+
+        // Se o número lido for um dígito e o próximo um delimitador, incrementa o contador de delimitadores
+        if(entry[index] == limiter && isdigit(entry[index + 1])){
             countLimiters++;
-            readyToFinish = false;
+            readyToFinish = FALSE;
             continue;
         }
-        if(entry[index] == '\n' && isDigit(entry[index - 1])){ // verifica quebras de linha
-            readyToFinish = true;
-            continue;
+
+        // Verifica quebras de linha
+        if(entry[index] == '\\' && entry[index + 1] == 'n' && isdigit(entry[index - 1])){
+            readyToFinish = TRUE;
+            break;
         }
     }
 
-    return true;
+    printf("\n%d\n", finalSum);
+
+    return readyToFinish;
 }

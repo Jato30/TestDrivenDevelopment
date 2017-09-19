@@ -4,19 +4,23 @@ using namespace std;
 
 string ReadFile(const string path){
     string entry;
+    ifstream myfile(path);
 
-    FILE *filePtr= fopen(path.c_str(), "r");
-	if(NULL == filePtr){
-		cout << "\tNão foi possivel abrir o arquivo: " << path << endl;
-	}
+    if(myfile.is_open()){
+        while(getline(myfile, entry)){
+            cout << entry;
+        }
+        myfile.close();
+    }
 
-    while(fscanf(filePtr, "%s", entry) == 1);
-	fclose(filePtr);
+    else{
+        cout << "Erro ao abrir o arquivo";
+    }
 
     return entry;
 }
 
-const bool WriteFile(const int sum) const{
+bool WriteFile(int sum){
     
     
     return true;
