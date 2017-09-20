@@ -30,7 +30,7 @@ debug: src/main.cpp $(FILES)
 	$(COMPILER) $(FILES) src/main.cpp -Iinclude -o $(EXEC) $(FLAGS) -O0 -ggdb
 
 test: src/TestCalculator.cpp $(FILES)
-	$(COMPILER) $(FILES) src/TestCalculator.cpp -Iinclude -o CALC.exe $(FLAGS) -O0 -ggdb -ftest-coverage -fprofile-arcs
+	$(COMPILER) $(FILES) src/TestCalculator.cpp -Iinclude -o $(EXEC) $(FLAGS) -O0 -ggdb -ftest-coverage -fprofile-arcs
 
 docs:
 	doxygen Doxyfile
