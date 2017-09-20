@@ -1,4 +1,5 @@
 #include "StringCalculator.hpp"
+#include "FileManager.hpp"
 #include <cctype>
 
 using namespace std;
@@ -10,9 +11,7 @@ int StringCalculator(string entry){
 
     // Lê a entrada
     for(uint index = 0; index < entry.size(); index++){
-        if(entry[index] == '\n'){
-            printf("TEM BARRA ENE");
-        }
+        
 
         if(isdigit(entry[index])){
             finalSum += atoi(&entry[index]);
@@ -22,5 +21,6 @@ int StringCalculator(string entry){
 
     printf("\n%d\n", finalSum);
 
+    WriteFile(finalSum);
     return readyToFinish;
 }

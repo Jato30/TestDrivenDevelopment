@@ -19,7 +19,7 @@ string ReadFile(const string path){
     file.close();
 
     string toReturn = "";
-    for(uint index = 1; index < entry.size(); ++index){
+    for(uint index = 0; index < entry.size(); ++index){
         toReturn += entry[index];
         toReturn += "\n";
     }
