@@ -8,7 +8,7 @@
 using std::string;
 
 #define TRUE 1
-#define FALSE 0
+#define FALSE -1
 
 typedef unsigned int uint;
 

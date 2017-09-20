@@ -11,7 +11,8 @@ int main(int argc, char** argv){
   }
 
   // Executa a calculadora enviando o conteúdo do arquivo recebido pelo sistema como parâmetro.
-  if(StringCalculator(ReadFile(argv[1]) != "" ? argv[1] : "./resources/EntryString.txt") != 1){
+  string entry = ReadFile(argv[1] != "" ? argv[1] : "./resources/EntryString.txt");
+  if(StringCalculator(entry) == -1){
     std::cout << "\nErro na funcao 'StringCalculator'" << std::endl;
   }
 

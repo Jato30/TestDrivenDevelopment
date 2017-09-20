@@ -6,6 +6,8 @@
 #include <iostream>
 #include <fstream>
 
+typedef unsigned int uint;
+
 /**
     \brief Leitura do arquivo de entrada.
     \return String contendo o conteúdo do arquivo lido.

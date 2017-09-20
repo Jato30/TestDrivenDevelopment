@@ -1,23 +1,30 @@
 #include "FileManager.hpp"
+#include <cstdio>
+#include <vector>
 
 using namespace std;
 
 string ReadFile(const string path){
-    string entry;
-    ifstream myfile(path);
+    vector<string> entry;
+    string line;
 
-    if(myfile.is_open()){
-        while(getline(myfile, entry)){
-            cout << entry;
-        }
-        myfile.close();
+    ifstream file;
+    file.open(path.c_str());
+
+    while(!file.eof()){
+        file >> line;
+        entry.push_back(line);
     }
 
-    else{
-        cout << "Erro ao abrir o arquivo";
+    file.close();
+
+    string toReturn = "";
+    for(uint index = 1; index < entry.size(); ++index){
+        toReturn += entry[index];
+        toReturn += "\n";
     }
 
-    return entry;
+    return toReturn;
 }
 
 bool WriteFile(int sum, string path){
