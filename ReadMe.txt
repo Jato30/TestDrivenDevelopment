@@ -1,4 +1,4 @@
-Universidade de Brasília
+﻿Universidade de Brasília
 Departamento de Ciência da Computação
 Disciplina: Métodos de Programação
 Código da Disciplina: 201600
@@ -36,6 +36,7 @@ Matrícula: 17/0052427
 	9) Debug: GDB v8.0
 	10) Compilador: g++ MinGW
 	11) ReadMe.txt
+	12) Projeto versionado no GitHub: <https://github.com/Jato30/TestDrivenDevelopment>
 
 
 20/09/2017
