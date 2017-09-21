@@ -1,6 +1,6 @@
 // Headers
-#include "FileManager.hpp"
-#include "StringCalculator.hpp"
+#include "testa_soma_string_stdin.hpp"
+#include "string_soma.hpp"
 
 int main(int argc, char** argv){
   // Verifica se há argumentos recebidos
@@ -12,8 +12,8 @@ int main(int argc, char** argv){
 
   // Executa a calculadora enviando o conteúdo do arquivo recebido pelo sistema como parâmetro.
   string entry = ReadFile(argv[1] != "" ? argv[1] : "./resources/EntryString.txt");
-  if(StringCalculator(entry) == -1){
-    std::cout << "\nErro na funcao 'StringCalculator'" << std::endl;
+  if(string_soma(entry) == -1){
+    std::cout << "\nErro na funcao 'string_soma'" << std::endl;
   }
 
   return 0;

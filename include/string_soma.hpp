@@ -1,6 +1,6 @@
 // Define para impedir include circular
-#ifndef __STRINGCALCULATOR__
-#define __STRINGCALCULATOR__
+#ifndef __STRING_SOMA__
+#define __STRING_SOMA__
 
 #include <string>
 
@@ -27,6 +27,6 @@ typedef unsigned int uint;
         Pode-se especificar um novo delimitador na primeira linha, desde que esteja entre colchetes, sozinho na primeira linha e começando por um "//".
         Pode haver qualquer número de delimitadores especificados e de qualquer tamanho.
 */
-int StringCalculator(string);
+int string_soma(string);
 
-#endif // __STRINGCALCULATOR__
+#endif // __STRING_SOMA__

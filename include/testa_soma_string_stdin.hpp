@@ -1,6 +1,6 @@
 // Define para impedir include circular
-#ifndef __FILEMANAGER__
-#define __FILEMANAGER__
+#ifndef __TESTA_SOMA_STRING_STDIN__
+#define __TESTA_SOMA_STRING_STDIN__
 
 #include <string>
 #include <iostream>
@@ -26,4 +26,4 @@ std::string ReadFile(const std::string);
 */
 bool WriteFile(int, std::string = "./resources/OutputString.txt");
 
-#endif // __FILEMANAGER__
+#endif // __TESTA_SOMA_STRING_STDIN__

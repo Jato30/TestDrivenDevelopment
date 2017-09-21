@@ -1,4 +1,4 @@
-FILES = src/StringCalculator.cpp src/FileManager.cpp
+FILES = src/string_soma.cpp src/testa_soma_string_stdin.cpp
 
 FLAGS= -std=c++11 -Wall -pedantic -Wextra -fmax-errors=5 -Wno-unused-parameter -Werror=init-self -fdiagnostics-color
 
@@ -29,8 +29,8 @@ release: src/main.cpp $(FILES)
 debug: src/main.cpp $(FILES)
 	$(COMPILER) $(FILES) src/main.cpp -Iinclude -o $(EXEC) $(FLAGS) -O0 -ggdb
 
-test: src/TestCalculator.cpp $(FILES)
-	$(COMPILER) $(FILES) src/TestCalculator.cpp -Iinclude -o $(EXEC) $(FLAGS) -O0 -ggdb -ftest-coverage -fprofile-arcs
+test: src/testa_string_soma.cpp $(FILES)
+	$(COMPILER) $(FILES) src/testa_string_soma.cpp -Iinclude -o $(EXEC) $(FLAGS) -O0 -ggdb -ftest-coverage -fprofile-arcs
 
 docs:
 	doxygen Doxyfile
