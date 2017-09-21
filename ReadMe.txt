@@ -32,7 +32,7 @@ Matrícula: 17/0052427
 	4) Framework de teste: Catch v1.10.0;
 	5) Instrumentação do código pelo gcov v7.2.0;
 	6) Análise estática do programa: cppcheck v1.80;
-	7) Documentação do código: DoxyGen v1.8.13
+	7) Documentação do código: DoxyGen v1.8.13. Para abri-lo, vá até "./docs/index.html"
 	9) Debug: GDB v8.0
 	10) Compilador: g++ MinGW
 	11) ReadMe.txt
