@@ -123,8 +123,10 @@ var menudata={children:[
 {text:"r",url:"globals.html#index_r"},
 {text:"s",url:"globals.html#index_s"},
 {text:"t",url:"globals.html#index_t"},
+{text:"u",url:"globals.html#index_u"},
 {text:"w",url:"globals.html#index_w"}]},
 {text:"Funções",url:"globals_func.html"},
+{text:"Definições de Tipos",url:"globals_type.html"},
 {text:"Definições e Macros",url:"globals_defs.html",children:[
 {text:"a",url:"globals_defs.html#index_a"},
 {text:"c",url:"globals_defs.html#index_c"},
