@@ -7,8 +7,8 @@
 // Namespace std para tipo string
 using std::string;
 
-#define TRUE 1
-#define FALSE -1
+#define VERDADEIRO 1
+#define FALSO -1
 
 typedef unsigned int uint;
 

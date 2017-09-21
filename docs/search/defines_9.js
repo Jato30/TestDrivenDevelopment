@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['warn',['WARN',['../catch_8hpp.html#a108d6c5c51dd46e82a62b262394f0242',1,'catch.hpp']]],
-  ['when',['WHEN',['../catch_8hpp.html#ab09e9b8186233f676ce6a23aebe89d6e',1,'catch.hpp']]]
+  ['verdadeiro',['VERDADEIRO',['../string__soma_8hpp.html#a662b9e899237e9d9db08a41d7323a60d',1,'string_soma.hpp']]]
 ];

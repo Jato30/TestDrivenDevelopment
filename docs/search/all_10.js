@@ -31,7 +31,6 @@ var searchData=
   ['translate',['translate',['../structCatch_1_1IExceptionTranslator.html#a2a554b96ed5ed411e7c796b6b42837a5',1,'Catch::IExceptionTranslator::translate()'],['../classCatch_1_1ExceptionTranslatorRegistrar_1_1ExceptionTranslator.html#a01871d12bd12521192d6c2a505ba54b6',1,'Catch::ExceptionTranslatorRegistrar::ExceptionTranslator::translate()']]],
   ['translateactiveexception',['translateActiveException',['../structCatch_1_1IExceptionTranslatorRegistry.html#af76ae8c331a17f2a94c9720bc0d686bb',1,'Catch::IExceptionTranslatorRegistry::translateActiveException()'],['../namespaceCatch.html#adafff91485eeeeb9e9333f317cc0e3b1',1,'Catch::translateActiveException()']]],
   ['trim',['trim',['../namespaceCatch.html#a084108b47f37d8bfd5db51c50c7451b3',1,'Catch']]],
-  ['true',['TRUE',['../string__soma_8hpp.html#aa8cecfc5c5c054d2875c03e77b7be15d',1,'string_soma.hpp']]],
   ['truetype',['TrueType',['../structCatch_1_1Detail_1_1TrueType.html',1,'Catch::Detail']]],
   ['truevalue',['trueValue',['../classCatch_1_1SafeBool.html#a05ad617886cacf7b4b6b9ebdd603d81c',1,'Catch::SafeBool']]],
   ['twobluecubes_5fcatch_5fapprox_5fhpp_5fincluded',['TWOBLUECUBES_CATCH_APPROX_HPP_INCLUDED',['../catch_8hpp.html#ac4e861fe31efada5e2470f4aba857224',1,'catch.hpp']]],

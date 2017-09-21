@@ -3,7 +3,6 @@ var searchData=
   ['test_5fcase',['TEST_CASE',['../catch_8hpp.html#a4306f112aa064372e584f2af283f24e9',1,'catch.hpp']]],
   ['test_5fcase_5fmethod',['TEST_CASE_METHOD',['../catch_8hpp.html#a883fb6fc28b7dbda0fcefb2dd626546f',1,'catch.hpp']]],
   ['then',['THEN',['../catch_8hpp.html#a27987092139727fd7a471b5f74dc62de',1,'catch.hpp']]],
-  ['true',['TRUE',['../string__soma_8hpp.html#aa8cecfc5c5c054d2875c03e77b7be15d',1,'string_soma.hpp']]],
   ['twobluecubes_5fcatch_5fapprox_5fhpp_5fincluded',['TWOBLUECUBES_CATCH_APPROX_HPP_INCLUDED',['../catch_8hpp.html#ac4e861fe31efada5e2470f4aba857224',1,'catch.hpp']]],
   ['twobluecubes_5fcatch_5fassertionresult_5fh_5fincluded',['TWOBLUECUBES_CATCH_ASSERTIONRESULT_H_INCLUDED',['../catch_8hpp.html#aa5118eb771d1cdf1a14bce53296675dc',1,'catch.hpp']]],
   ['twobluecubes_5fcatch_5fcapture_5fhpp_5fincluded',['TWOBLUECUBES_CATCH_CAPTURE_HPP_INCLUDED',['../catch_8hpp.html#af06e9a04b0106596b7645d81e1aba5c0',1,'catch.hpp']]],
